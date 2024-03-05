@@ -150,3 +150,59 @@ function sumOfNum($num)
 }
 
 echo "\n",sumOfNum(1234);
+
+$arr=[];
+$str = "x";
+$arr[0] = "x";
+for($i = 1;$i<20;$i++){
+    $arr[$i] = $arr[$i-1].$str;
+}
+printArray($arr);
+
+function arrayFill($var,$num)
+{
+    $arr = [];
+    for ($i = 0; $i<$num;$i++){
+        $arr[$i] = $var;
+    }
+    return $arr;
+}
+printArray(arrayFill(1,10));
+
+$arr = [[1, 2, 3], [4, 5], [6]];
+$sum = 0;
+for ($i = 0;$i<count($arr);$i++){
+    for ($j = 0;$j<count($arr[$i]);$j++){
+        $sum += $arr[$i][$j];
+    }
+}
+echo "\n$sum";
+
+$arr = [];
+$count = 0;
+for ($i = 0;$i<3;$i++){
+    for ($j = 0;$j<3;$j++){
+        $arr[$i][$j] = $count;
+        $count++;
+    }
+}
+
+$arr = [2, 5, 3, 9];
+$arr[0] = $arr[0] * $arr[1];
+$arr[2] = $arr[2] * $arr[3];
+$result = 0;
+foreach($arr as $i){
+    $result += $i;
+}
+echo "\n$result";
+
+$user = ["name" => "Vitaly","surname" => "Grin","patronymic" => "Aleksandrovich"];
+echo "\n$user[name] $user[surname] $user[patronymic]";
+
+$date = ["year" => "2024","month" => "03","day" => "05"];
+echo "\n$date[year]-$date[month]-$date[day]";
+
+$arr = ['a', 'b', 'c', 'd', 'e'];
+echo "\n",count($arr);
+
+echo "\n",$arr[count($arr)-1],$arr[count($arr)-2];
