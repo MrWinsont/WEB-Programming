@@ -94,3 +94,11 @@ foreach($arr as $i){
     }
 }
 echo "\n",$count;
+
+function printStringReturnNumber()
+{
+    echo "\nprint something";
+    return 1;
+}
+$myNum = printStringReturnNumber();
+echo "\n$myNum";
