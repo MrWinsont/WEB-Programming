@@ -15,3 +15,10 @@ echo "\n",5+7;
 $lastMonth = 1187.23;
 $thisMonth = 1089.98;
 echo "\n", $lastMonth - $thisMonth;
+
+$numLanguages = 4;
+$months = 11;
+$days = $months * 16;
+$daysPerLanguage = $days / $numLanguages;
+echo "\n$daysPerLanguage";
+
