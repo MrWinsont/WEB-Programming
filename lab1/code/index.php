@@ -22,3 +22,4 @@ $days = $months * 16;
 $daysPerLanguage = $days / $numLanguages;
 echo "\n$daysPerLanguage";
 
+echo "\n",8**2;
