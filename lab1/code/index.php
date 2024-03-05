@@ -23,3 +23,12 @@ $daysPerLanguage = $days / $numLanguages;
 echo "\n$daysPerLanguage";
 
 echo "\n",8**2;
+
+$myNum = 7;
+$answer = $myNum;
+$answer+=2;
+$answer*=2;
+$answer-=2;
+$answer/=2;
+$answer-=$myNum;
+echo "\n$answer";
