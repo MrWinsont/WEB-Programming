@@ -102,3 +102,51 @@ function printStringReturnNumber()
 }
 $myNum = printStringReturnNumber();
 echo "\n$myNum";
+
+function increaseEnthusiasm($str)
+{
+    return $str.="!";
+}
+echo "\n",increaseEnthusiasm("hello world");
+
+function repeatThreeTimes($str)
+{
+    $str.=$str.$str;
+    return $str;
+}
+echo "\n",repeatThreeTimes("bye world");
+
+echo "\n".increaseEnthusiasm(repeatThreeTimes("haha"));
+
+function cut($str,$var = 10)
+{
+    return substr_replace($str,"",$var ,strlen($str)-1);
+}
+
+echo "\n",cut("aaa",2);
+
+function printArray($arr=[],$i = 0){
+    if($i == count($arr)){
+        return 0;
+    }
+    echo "\n$arr[$i]";
+    return printArray($arr,++$i);
+}
+printArray([1,2,3,4,5,6,7,8,9]);
+
+function sumOfNum($num)
+{
+    $sum = 0;
+    while ($num > 0) {
+        $sum += $num % 10;
+        $num = intdiv($num,10);
+    }
+    if ($sum > 9){
+        $sum = sumOfNum($sum);
+    }
+
+    return $sum;
+
+}
+
+echo "\n",sumOfNum(1234);
