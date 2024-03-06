@@ -204,5 +204,69 @@ echo "\n$date[year]-$date[month]-$date[day]";
 
 $arr = ['a', 'b', 'c', 'd', 'e'];
 echo "\n",count($arr);
+echo "\n",$arr[count($arr)-1],"\n", $arr[count($arr)-2];
 
-echo "\n",$arr[count($arr)-1],$arr[count($arr)-2];
+function checkSum($var1,$var2)
+{
+    if($var1+$var2 > 10){
+        return true;
+
+    }
+    else{
+        return false;
+    }
+}
+
+function equalCheck($var1,$var2)
+{
+    if($var1 == $var2){
+        return true;
+
+    }
+    else{
+        return false;
+    }
+}
+$test = 0;
+if (!$test)
+    echo 'верно';
+
+function sumNum($num)
+{
+    $sum = 0;
+    while ($num > 0) {
+        $sum += $num % 10;
+        $num = intdiv($num,10);
+    }
+
+    return $sum;
+
+}
+$age = rand(1,200);
+echo "\n$age";
+if ($age < 10 or $age > 99){
+    echo "\n num is less then 10 or more then 99";
+}
+else{
+    $sum = sumNum($age);
+    if($sum <= 9){
+        echo "\n сумма цифр однозначна";
+    }
+    else{
+        echo "\nсумма цифр двузначна";
+    }
+}
+$arr = [];
+for ($i = 0; $i <= rand(1,6);$i++){
+    $arr[$i] = rand(1,10);
+}
+if (count($arr) == 3){
+    $sum=0;
+    foreach($arr as $i){
+        $sum += $i;
+    }
+    echo "\n$sum";
+}
+
+
+
