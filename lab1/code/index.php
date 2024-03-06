@@ -274,3 +274,28 @@ for($i=1;$i < 21;$i++){
 }
 
 
+$arr = [1,2,3];
+echo "\n",array_sum($arr) / count($arr);
+
+echo "\n",array_sum(range(1,100));
+
+function sqrtArr(&$arr,$num)
+{
+    if ($num == count($arr)){
+        return 0;
+    }
+    $arr[$num] = sqrt($arr[$num]);
+    return sqrtArr($arr,++$num);
+
+}
+$arr = range(1,100);
+sqrtArr($arr,0);
+echo "\n",$arr[1];
+
+$arr = array_combine(range("a","z"),range(1,26));
+var_dump($arr);
+
+$str = "1234567890";
+$arr = str_split($str, 2);
+echo "\n",array_sum($arr);
+
