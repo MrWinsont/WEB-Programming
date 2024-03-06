@@ -268,5 +268,9 @@ if (count($arr) == 3){
     echo "\n$sum";
 }
 
+$str = "x";
+for($i=1;$i < 21;$i++){
+    echo "\n",str_repeat($str,$i);
+}
 
 
