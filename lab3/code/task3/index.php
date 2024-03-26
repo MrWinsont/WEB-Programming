@@ -47,12 +47,13 @@
                     for($i = 2; $i < count($directories); $i++){
                         $titles = scandir("./categories/$directories[$i]");
                         for($j = 2; $j < count($titles); $j++){
-                            $fileArray = file("./categories/$directories[$i]/$titles[$j]");
+                            $fileAray = file("./categories/$directories[$i]/$titles[$j]");
 
                             echo "<tr>";
                             echo "<td>$directories[$i]</td>";
-                            echo "<td>$titles[$j]</td>";
-                            echo "<td>$fileArray[0]</td>";
+                            $newTitle = str_replace(".txt","",$titles[$j]);
+                            echo "<td>$newTitle</td>";
+                            echo "<td>$fileAray[0]</td>";
                             echo "</tr>";
                         }
 
