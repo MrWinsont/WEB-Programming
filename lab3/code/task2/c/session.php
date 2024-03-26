@@ -9,8 +9,10 @@
     $_SESSION["age"] = $_POST["age"];
     $_SESSION["salary"] = $_POST["salary"];
     $_SESSION["animal"] = $_POST["animal"];
-
+    echo "<ul>";
     foreach ($_SESSION as $key => $value){
-        echo $key, " - ", $value, "<br>";
+
+        echo "<li>", $key, " - ", $value, "</li>";
     }
+    echo "</ul>";
 ?>
