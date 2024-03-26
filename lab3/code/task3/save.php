@@ -18,7 +18,7 @@ $description = $_POST['description'];
 $filePath = "categories/{$category}/{$title}.txt";
 
 if (false === file_put_contents($filePath, $description)){
-    throw new Exeption('Smth went wrong');
+    throw new Exception('Smth went wrong');
 }
 chmod($filePath,0777);
 redirectToHome();
