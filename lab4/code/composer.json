@@ -1,0 +1,15 @@
+{
+    "name": "vitalya/lab4",
+    "description": "-",
+    "type": "project",
+    "license": "owo",
+    "authors": [
+        {
+            "name": "vitalya"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "google/apiclient": "2.15.0"
+    }
+}
